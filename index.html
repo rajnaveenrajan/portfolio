@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen Raj R | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-bg: #050a18;
+            --secondary-bg: #0c1427;
+            --accent-blue: #3b82f6;
+            --text-main: #e2e8f0;
+            --text-dim: #94a3b8;
+            --glass: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+        }
+        /* --- Layout Grids --- */
+.dna-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.appreciation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* --- Interactive Hover Effects --- */
+.dna-card, .doc-display-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.dna-card img, .embedded-doc-img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Fade Zoom & Blur on Hover */
+.dna-card:hover img, .doc-display-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.dna-card:hover, .doc-display-card:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+    border-color: var(--accent-blue);
+}
+
+/* --- Global Modal Background Blur --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 15, 30, 0.95);
+    backdrop-filter: blur(15px); /* Strong background blur */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 12px;
+    animation: zoomEffect 0.3s ease-out;
+}
+
+@keyframes zoomEffect {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+        /* --- Hover Effects for Canva & Certificates --- */
+.dna-card, .doc-display-card {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Zoom and Fade effect on hover */
+.dna-card:hover img, .doc-display-card:hover .embedded-doc-img {
+    transform: scale(1.1); /* Zoom in */
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Background blur and glow on hover */
+.dna-card:hover, .doc-display-card:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+    border-color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.08);
+}
+
+/* --- The "Wow" Click Effect (Modal) --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 10, 24, 0.9); /* Deep Navy Overlay */
+    backdrop-filter: blur(10px); /* Blur effect background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+        .selection-intro {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    line-height: 1.8;
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    border-left: 3px solid var(--accent-blue);
+    padding-left: 20px;
+    background: rgba(59, 130, 246, 0.05);
+    padding: 20px;
+    border-radius: 0 15px 15px 0;
+}
+        /* Add-on for non-transparent logos */
+.logo-card img, .mini-logo, .glossy-university-logo {
+    /* Creates the smooth curved edges */
+    border-radius: 18px; 
+    
+    /* Adds a subtle border so the logo doesn't "bleed" into the dark background */
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    
+    /* Ensures the image fills the curved box perfectly without stretching */
+    object-fit: cover; 
+    
+    /* Adds a professional shadow to lift the logo off the page */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    
+    padding: 5px; /* Adds a little breathing room inside the curve */
+    background-color: #fff; /* Ensures white-background logos look intentional */
+}
+
+/* Optional: If you want a circular look instead of a curve */
+.round-logo {
+    border-radius: 50% !important;
+}
+        .hired-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(45deg, #22c55e, #16a34a); /* Success Green */
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(34, 197, 94, 0.3);
+}
+
+.role-offered {
+    font-size: 0.7rem;
+    color: var(--accent-blue);
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.logo-card {
+    position: relative; /* Essential for the badge positioning */
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+        /* Glossy Education Card Layout */
+.education-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* The Glossy Badge Effect */
+.glossy-logo-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05); /* Very light glass */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 140px;
+    height: 140px;
+    overflow: hidden;
+}
+
+/* Adding the "Glossy" Shine Overlay */
+.glossy-logo-container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    animation: shine 4s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
+
+.glossy-university-logo {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
+}
+
+.university-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.edu-status {
+    color: var(--text-dim);
+    font-style: italic;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .education-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+        /* Glass Logo Grid */
+.glass-logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.logo-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
+    padding: 20px;
+    border-radius: 20px;
+    width: 180px;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.logo-card:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--accent-blue);
+    transform: scale(1.05);
+}
+
+.logo-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(1.5);
+    transition: 0.4s;
+}
+
+.logo-card:hover img {
+    filter: grayscale(0%) brightness(1);
+}
+
+.logo-card span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-dim);
+}
+
+/* Document Cards */
+.doc-card {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.doc-badge {
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    background: var(--accent-blue);
+    color: white;
+    font-size: 0.7rem;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+}
+
+.view-link {
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Navigation Sidebar --- */
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 260px;
+            background: var(--secondary-bg);
+            border-right: 1px solid var(--card-border);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .profile-card {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 1rem 0;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-blue);
+            transform: translateX(5px);
+        }
+
+        /* --- Main Content Area --- */
+        main {
+            margin-left: 260px;
+            padding: 2rem 4rem;
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* --- Hero Section --- */
+        #home {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-tag {
+            background: var(--accent-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            width: max-content;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 4rem; margin-bottom: 1rem; }
+        .subtitle { font-size: 1.5rem; color: var(--text-dim); margin-bottom: 2rem; }
+
+        /* --- Cards & Grid Layouts --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--glass);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--card-border);
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* --- Experience Timeline --- */
+        .timeline-item {
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+            border-left: 2px solid var(--accent-blue);
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+        }
+
+        .date { color: var(--accent-blue); font-weight: bold; font-size: 0.9rem; }
+        .company { font-size: 1.2rem; font-weight: 700; color: #fff; }
+        .role { font-style: italic; color: var(--text-dim); margin-bottom: 1rem; }
+
+        /* --- Skills Tags --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        /* --- Recommendation Slider Styling --- */
+        .rec-card {
+            font-style: italic;
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 1.5rem;
+        }
+
+        .author {
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: bold;
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            nav { width: 80px; padding: 1rem; }
+            nav span, .profile-card h2, .profile-card p { display: none; }
+            main { margin-left: 80px; padding: 2rem; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/150" alt="Naveen Raj">
+            <h2 style="font-size: 1.2rem;">Naveen Raj R</h2>
+            <p style="font-size: 0.8rem; color: var(--text-dim);">HR Innovator & BCA Student</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active"><i class="fa fa-home"></i> <span>Home</span></a></li>
+            <li><a href="#about"><i class="fa fa-user"></i> <span>About</span></a></li>
+            <li><a href="#experience"><i class="fa fa-briefcase"></i> <span>Experience</span></a></li>
+            <li><a href="#projects"><i class="fa fa-code"></i> <span>Projects</span></a></li>
+            <li><a href="#education"><i class="fa fa-graduation-cap"></i> <span>Education</span></a></li>
+            <li><a href="#skills"><i class="fa fa-gears"></i> <span>Skills</span></a></li>
+            <li><a href="#testimonials"><i class="fa fa-quote-left"></i> <span>Recommendations</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" data-aos="fade-up">
+            <div class="hero-tag">OPEN TO WORK</div>
+            <h1>I Bridge the Gap Between <br><span style="color:var(--accent-blue)">People & Technology.</span></h1>
+            <p class="subtitle">Freelance Recruiter | AI Enthusiast | Future HR Leader</p>
+            <div class="skills-container">
+                <span class="skill-tag">#Leadership</span>
+                <span class="skill-tag">#PeopleAnalytics</span>
+                <span class="skill-tag">#Automation</span>
+            </div>
+        </section>
+
+        <section id="about" data-aos="fade-right">
+            <h2 class="section-title"><i class="fa fa-user"></i> About Me</h2>
+            <div class="card">
+                <p>I am a BCA student deeply passionate about how technology can transform HR practices. With hands-on experience in leadership and team management, I have guided hundreds of interns while improving efficiency through digital task management and record-keeping.</p>
+                <br>
+                <p>My goal is to combine people-focused strategies with technology-driven solutions, leveraging tools like AI and JavaScript to eliminate repetitive tasks in the recruitment lifecycle.</p>
+            </div>
+        </section>
+
+        <section id="experience" data-aos="fade-left">
+            <h2 class="section-title"><i class="fa fa-briefcase"></i> Professional Journey</h2>
+            
+            <div class="timeline-item">
+                <div class="date">Jun 2025 - Present</div>
+                <div class="company">GAOTek Inc.</div>
+                <div class="role">Assistant Country Team Lead (Remote)</div>
+                <ul>
+                    <li>Managed 150+ interns across 10+ teams throughout India.</li>
+                    <li>Developed Google Sheets automation for task distribution.</li>
+                    <li>Acting key link between interns and overseas senior management.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="date">Apr 2025 - May 2025</div>
+                <div class="company">GAOTek Inc.</div>
+                <div class="role">Assistant Team Lead</div>
+                <ul>
+                    <li>Managed full-cycle recruitment, screening, and onboarding.</li>
+                    <li>Mentored new HR interns and conducted training sessions.</li>
+                    <li>Awarded <strong>"Best Assistant Team Lead of the Week"</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="date">Mar 2025 - Apr 2025</div>
+                <div class="company">GAOTek Inc.</div>
+                <div class="role">Human Resources Recruiter (Internship)</div>
+                <ul>
+                    <li>Sourced candidates and conducted interviews globally.</li>
+                    <li>Designed recruitment posters using Canva.</li>
+                    <li>Promoted to Assistant Team Lead within just one month.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" data-aos="zoom-in">
+            <h2 class="section-title"><i class="fa fa-code"></i> Innovation Projects</h2>
+            <div class="card">
+                <h3>Automated Email Forwarding for Intern Applications</h3>
+                <p class="date">Jul 2025 - Present</p>
+                <p>Developed an end-to-end system using <strong>JavaScript</strong> and <strong>Google Apps Script</strong> to automate intern applications.</p>
+                <br>
+                <ul>
+                    <li>Integrated <strong>Gemini AI</strong> for efficient code generation and prompt engineering.</li>
+                    <li>Processed <strong>100 emails in 2 minutes</strong>, drastically improving recruitment speed.</li>
+                    <li>Automated labeling, organization, and routing of new candidates.</li>
+                </ul>
+                <div class="skills-container" style="margin-top: 1rem;">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Google Apps Script</span>
+                    <span class="skill-tag">Gemini AI</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" data-aos="fade-up">
+    <h2 class="section-title"><i class="fa fa-graduation-cap"></i> Education</h2>
+    <div class="card education-card">
+        <div class="education-content">
+            <div class="glossy-logo-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQxOw426AJXZQZBiA3zt9DbbBjPWpz-SLzjRvGsUMMA9T3JG639EyL5PF59CQ&s" alt="Joy University Logo" class="glossy-university-logo">
+            </div>
+            <div class="education-text">
+                <h3 style="color: var(--accent-blue); font-size: 1.5rem;">Bachelor of Computer Applications (BCA)</h3>
+                <p class="university-name">Joy University, Tirunelveli, Tamil Nadu</p>
+                <p class="university-name">2025 - 2028</p>
+                <p class="edu-status">Focusing on Technology-Driven HR Solutions & Digital Strategy</p>
+                <div class="skills-container" style="margin-top: 10px;">
+                    <span class="skill-tag">Computer Science</span>
+                    <span class="skill-tag">Business Management</span>
+                    <span class="skill-tag">People Analytics</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="skills" data-aos="fade-up">
+            <h2 class="section-title"><i class="fa fa-gears"></i> Skills & Expertise</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>HR & Leadership</h4>
+                    <div class="skills-container">
+                        <span class="skill-tag">Recruiting</span> <span class="skill-tag">Onboarding</span>
+                        <span class="skill-tag">Team Management</span> <span class="skill-tag">Strategic Planning</span>
+                        <span class="skill-tag">Conflict Resolution</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4>Tech & Automation</h4>
+                    <div class="skills-container">
+                        <span class="skill-tag">JavaScript</span> <span class="skill-tag">Google Apps Script</span>
+                        <span class="skill-tag">Prompt Engineering</span> <span class="skill-tag">Gemini AI</span>
+                        <span class="skill-tag">Excel Automation</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4>Creative & Tools</h4>
+                    <div class="skills-container">
+                        <span class="skill-tag">Canva</span> <span class="skill-tag">SEO Copywriting</span>
+                        <span class="skill-tag">Social Media Marketing</span> <span class="skill-tag">Google Workspace</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" data-aos="fade-up">
+            <h2 class="section-title"><i class="fa fa-quote-left"></i> Recommendations</h2>
+            <div class="grid">
+                <div class="card rec-card">
+                    "He consistently displayed strong leadership... what stood out most was his approachable nature and willingness to guide."
+                    <span class="author">- Divya Sharma, HR Associate</span>
+                </div>
+                <div class="card rec-card">
+                    "What makes Naveen stand out is his kindness and humility—he never carried the air of being superior."
+                    <span class="author">- Ishika Sharma, HRM Post-Graduate</span>
+                </div>
+                <div class="card rec-card">
+                    "His ability to balance both mentorship and teamwork made a big difference in our team."
+                    <span class="author">- Aarti Kushwah, Human Resource</span>
+                </div>
+            </div>
+        </section> 
+        
+        <section id="selection-portfolio">
+    <h2 class="section-title">Internship Selection Portfolio</h2>
+    <p class="selection-intro">
+        <strong>Strategic Selection:</strong> A track record of high-demand selection. While I have been recruited by numerous organizations for internships, I prioritize environments that offer professional synergy and high-impact growth. This portfolio showcases my interview successes and the selective milestones where my profile was recognized by top-tier recruiters
+    </p>
+
+    <div class="glass-logo-grid">
+        <div class="glass-logo-grid">
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="150" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://gaotek.com/wp-content/uploads/2024/02/GAOTek-Logo-Final20-100x100-1.png" alt="GAOTek">
+        <span>GAOTek Inc.</span>
+        <p class="role-offered">HR Admin & Recruitment Lead</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="200" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://banao.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBanaoLogo.303c8651.png&w=256&q=75" alt="Banao">
+        <span>Banao Technologies</span>
+        <p class="role-offered">HR Associate</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="250" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyKyJLqof5YPkwdDHlW35K4YVVsA7AlOQB1BFcb_xvUSbmJO3u9wwaWUOZbfw&s" alt="Metvy">
+        <span>Metvy</span>
+        <p class="role-offered">Sales Growth Trainee</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="300" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOXDW47lkhdIt0Rr2N-vYNWumN9TWjXaG9I6qzzo1IKsuNkmQoiYXEFBnvMS4&s" alt="IMUN">
+        <span>IMUN</span>
+        <p class="role-offered">Campus Ambassador</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="350" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://www.earlyjobs.ai/images/logo.png" alt="EarlyJobs">
+        <span>EarlyJobs</span>
+        <p class="role-offered">HR Recruiter</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="400" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZusMMeugJ86GNYLrXgJ6mg7dmkcTbTsdGmeZn8j2gA5ULy8qZYkU6JcgEZg&s" alt="Redient">
+        <span>Redient Security</span>
+        <p class="role-offered">Tele-Caller (Business)</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="450" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKnUDZShG4EMLFmgR2hWuE6vDws9MktEwpnR79Qc8n61FxwroxZHkp8IT5DA&s" alt="IFORTIS">
+        <span>IFORTIS Worldwide</span>
+        <p class="role-offered">Marketing Associate</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="500" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXtTfoHIv0h-Vp7HUgepzuANPGO9E5vDZxKfWCvsm_wkR1A66nrBLR-EiE_9g&s" alt="Careers 360">
+        <span>Careers 360</span>
+        <p class="role-offered">Campus Ambassador</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="550" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9BwayaOaUOrDCcJqiAOJbb0SSE2hf-4MWvSf1aAqaYF_xdcOBSQ4_kYGJfx4&s" alt="Suvidha">
+        <span>Suvidha Foundations</span>
+        <p class="role-offered">Human Resources</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="600" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKNGru2z9qqylm071vonzGY5yq0ggS-msxVW3jXMnE3hlQoSOI8ROs_HTBS-I&s" alt="InAmigos">
+        <span>InAmigos Foundation</span>
+        <p class="role-offered">Content Writer</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="650" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRld2QGgKgHK51lr4BJF1m3AUSXtLyOdwxGdmTtaDendk3I73jQbkFH7q0JZA&s" alt="Marpu">
+        <span>Marpu Foundation</span>
+        <p class="role-offered">Impact Storyteller</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="700" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfs67X6joMYSWF0AyUm7k7KVY5YETvvQdnMuPRHNEgKz-RuwjbIrszxUIXJQ&s" alt="NxtJob">
+        <span>NxtJob.ai</span>
+        <p class="role-offered">HR Operations</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="750" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXkmNa5pUm2r2y8nT26piHLh8GrAZXv--LTe212pfJCl1oRZAwp0zy-S5m3A&s" alt="Bhartiya">
+        <span>Bhartiya Airways</span>
+        <p class="role-offered">HR & Marketing Lead</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="800" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://www.collegetips.in/images/logo.jpg" alt="CollegeTips">
+        <span>CollegeTips.in</span>
+        <p class="role-offered">Summer Intern</p>
+    </div>
+
+    <div class="logo-card" data-aos="zoom-in" data-aos-delay="850" onclick="zoomImage(this)">
+        <div class="hired-badge">HIRED</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTl_zABhDu7hltURwpMNIh7Kb0ICA7RfRy2aTvIo1RlDVp-ramOnrWBdLerA&s" alt="Analytics">
+        <span>Analytics Career Connect</span>
+        <p class="role-offered">HR Recruiter</p>
+    </div>
+</div>
+        
+</section>
+
+    <div id="imageModal" class="modal" onclick="this.style.display='none'">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="imgFull">
+</div>
+
+<section id="creative-showcase" data-aos="zoom-in">
+    <div class="creative-redirect-card">
+        <div class="creative-content">
+            <h2 class="section-title" style="border:none; justify-content: center;">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Creative Design DNA
+            </h2>
+            
+            <div class="quote-container">
+                <i class="fa fa-quote-left quote-icon"></i>
+                <p class="creative-quote">
+                    "Design is not just what it looks like and feels like. <br>
+                    <span>Design is how it works</span> to bridge human emotion with corporate logic."
+                </p>
+            </div>
+
+            <p class="creative-desc">
+                From global top-tier Canva achievements to professional corporate branding for GAOTek Inc., 
+                explore my full visual portfolio on my dedicated creative platform.
+            </p>
+
+            <a href="YOUR_EXTERNAL_URL_HERE" target="_blank" class="creative-btn">
+                <span>View Creative Portfolio</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+        
+        <div class="glow-orb"></div>
+    </div>
+</section>
+
+<style>
+/* --- Creative Redirect Styles --- */
+.creative-redirect-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(12, 20, 39, 0.5) 100%);
+    border: 1px solid var(--card-border);
+    border-radius: 30px;
+    padding: 4rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.creative-content {
+    position: relative;
+    z-index: 2;
+}
+
+.quote-container {
+    margin-bottom: 2rem;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: var(--accent-blue);
+    opacity: 0.3;
+    margin-bottom: 1rem;
+}
+
+.creative-quote {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #fff;
+    font-style: italic;
+}
+
+.creative-quote span {
+    color: var(--accent-blue);
+}
+
+.creative-desc {
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    color: var(--text-dim);
+    font-size: 1.1rem;
+}
+
+/* --- The Magnetic Button --- */
+.creative-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--accent-blue);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+}
+
+.creative-btn:hover {
+    transform: scale(1.05) translateY(-5px);
+    background: #2563eb;
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.6);
+}
+
+.creative-btn i {
+    transition: transform 0.3s ease;
+}
+
+.creative-btn:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* --- Background Decoration --- */
+.glow-orb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: var(--accent-blue);
+    filter: blur(120px);
+    opacity: 0.15;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .creative-quote { font-size: 1.4rem; }
+}
+</style>
+
+<section id="credentials" data-aos="zoom-in">
+    <div class="credentials-container">
+        <h2 class="section-title" style="justify-content: center; border: none;">
+            <i class="fa fa-file-signature"></i> Verified Credentials
+        </h2>
+
+        <div class="milestone-quote-box">
+            <p class="milestone-quote">
+                "The number of offers you receive isn't what defines your success; 
+                <span>it is the one you choose</span>—the one that makes you shine 
+                and empowers you to grow globally—that truly matters."
+            </p>
+        </div>
+
+        <p class="credentials-subtitle">
+            Authenticity is the foundation of leadership. Explore my official documents and career milestones hosted on my Google Evidence Portal.
+        </p>
+
+        <div class="credentials-grid">
+            <a href="YOUR_GOOGLE_SITE_URL#LoR_Section" target="_blank" class="credential-link-card">
+                <div class="card-content">
+                    <div class="doc-badge">Verified LoR</div>
+                    <div class="doc-icon-wrap">
+                        <i class="fa fa-award"></i>
+                    </div>
+                    <h3>Managerial Recommendation</h3>
+                    <p>Digital copy of the official recommendation from GAOTek HR Management recognizing leadership excellence.</p>
+                    <span class="portal-link">Open<i class="fa fa-external-link"></i></span>
+                </div>
+            </a>
+
+            <a href="YOUR_GOOGLE_SITE_URL#Offers_Section" target="_blank" class="credential-link-card">
+                <div class="card-content">
+                    <div class="doc-badge">10+ Offers</div>
+                    <div class="doc-icon-wrap">
+                        <i class="fa fa-file-contract"></i>
+                    </div>
+                    <h3>Career Milestone Portfolio</h3>
+                    <p>A curated collection of offer letters from global organizations, representing a track record of high demand.</p>
+                    <span class="portal-link">Open<i class="fa fa-external-link"></i></span>
+                </div>
+            </a>
+
+            <a href="YOUR_GOOGLE_SITE_URL#Offers_Section" target="_blank" class="credential-link-card">
+                <div class="card-content">
+                    <div class="doc-badge">Verification</div>
+                    <div class="doc-icon-wrap">
+                        <i class="fa fa-file-contract"></i>
+                    </div>
+                    <h3>GAOTek Inc. Career Milestones</h3>
+                    <p>A comprehensive record of human resource leadership, digital strategy training, and managerial recognition.</p>
+                    <span class="portal-link">Open<i class="fa fa-external-link"></i></span>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+</section>
+
+<style>
+/* --- Credentials Section Styles --- */
+.credentials-container {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(12, 20, 39, 0.6) 100%);
+    border: 1px solid var(--card-border);
+    border-radius: 30px;
+    padding: 3rem;
+    text-align: center;
+}
+
+.milestone-quote-box {
+    max-width: 800px;
+    margin: 1.5rem auto 2.5rem auto;
+    padding: 20px;
+    border-left: 3px solid var(--accent-blue);
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: 0 15px 15px 0;
+}
+
+.milestone-quote {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: 500;
+}
+
+.milestone-quote span {
+    color: var(--accent-blue);
+    font-weight: 700;
+}
+
+.credentials-subtitle {
+    color: var(--text-dim);
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.credential-link-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-content {
+    background: var(--glass);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--card-border);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.credential-link-card:hover .card-content {
+    border-color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.doc-badge {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background: var(--accent-blue);
+    color: white;
+    font-size: 0.7rem;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-weight: 700;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.doc-icon-wrap {
+    width: 70px;
+    height: 70px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: 0.3s;
+}
+
+.doc-icon-wrap i {
+    font-size: 2rem;
+    color: var(--accent-blue);
+}
+
+.credential-link-card:hover .doc-icon-wrap {
+    background: var(--accent-blue);
+}
+
+.credential-link-card:hover .doc-icon-wrap i {
+    color: white;
+}
+
+.card-content h3 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.card-content p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.portal-link {
+    margin-top: auto;
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Mobile Tweak */
+@media (max-width: 768px) {
+    .credentials-container { padding: 1.5rem; }
+    .milestone-quote { font-size: 1.1rem; }
+}
+</style>
+
+        
+
+<footer style="text-align: center; padding: 4rem 2rem; color: var(--text-dim); border-top: 1px solid var(--card-border);">
+            <p>© 2026 Naveen Raj R. | Built with passion for HR Tech & Creative Design.</p>
+            <div style="margin-top: 10px; font-size: 0.8rem;">
+                <span style="color: var(--accent-blue);">BCA Student</span> • 
+                <span style="color: var(--accent-blue);">HR Specialist</span> • 
+                <span style="color: var(--accent-blue);">Canva Expert</span>
+            </div>
+        </footer>
+    </main>
+
+    <div id="imageModal" class="modal" onclick="this.style.display='none'">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFull">
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize Animations (Makes sections visible)
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+        });
+
+        // The Image Zoom Function
+        function zoomImage(element) {
+            var modal = document.getElementById("imageModal");
+            var fullImg = document.getElementById("imgFull");
+            
+            // This looks for the img tag inside the card you clicked
+            var clickedImg = element.querySelector('img');
+            
+            if (modal && clickedImg) {
+                modal.style.display = "flex";
+                fullImg.src = clickedImg.src;
+            }
+        }
+
+        // Close Modal if background is clicked
+        window.onclick = function(event) {
+            var modal = document.getElementById("imageModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
+Initial commit
